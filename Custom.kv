@@ -16,3 +16,31 @@ MainInterface:
             name: "background_3"
             Image:
                 source: "Background_3.png"
+    Image:
+        source: "Top_Bar.png"
+        size: 480, 135
+        pos: 0, root.height-135
+    Button:
+        size: 112.5, 75
+        pos: root.width/2 - 168.75, root.height-100
+        background_color: 1,1,1,0
+        Image:
+            source: "Start_Btn.png"
+            center_x: self.parent.center_x
+            center_y: self.parent.center_y
+    Button:
+        size: 112.5, 75
+        pos: root.width/2-56.25, root.height-100
+        background_color: 1,1,1,0
+        Image:
+            source: "Stats_Btn.png"
+            center_x: self.parent.center_x
+            center_y: self.parent.center_y
+    Button:
+        size: 112.5, 75
+        pos: root.width/2+56.25, root.height-100
+        background_color: 1,1,1,0
+        Image:
+            source: "Likes_Btn.png"
+            center_x: self.parent.center_x
+            center_y: self.parent.center_y
