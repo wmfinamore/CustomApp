@@ -24,7 +24,7 @@ MainInterface:
         size: 112.5, 75
         pos: root.width/2 - 168.75, root.height-100
         background_color: 1,1,1,0
-        on_press: root.S_pressing(S_img)
+        on_press: root.S_pressing(S_img, sm)
         on_release: root.S_releasing(S_img)
         Image:
             id: S_img
@@ -35,7 +35,7 @@ MainInterface:
         size: 112.5, 75
         pos: root.width/2-56.25, root.height-100
         background_color: 1,1,1,0
-        on_press: root.ST_pressing(ST_img)
+        on_press: root.ST_pressing(ST_img, sm)
         on_release: root.ST_releasing(ST_img)
         Image:
             id: ST_img
@@ -46,7 +46,7 @@ MainInterface:
         size: 112.5, 75
         pos: root.width/2+56.25, root.height-100
         background_color: 1,1,1,0
-        on_press: root.L_pressing(L_img)
+        on_press: root.L_pressing(L_img, sm)
         on_release: root.L_releasing(L_img)
         Image:
             id: L_img
