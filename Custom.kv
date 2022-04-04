@@ -1,11 +1,18 @@
 Basic_UX:
 
 <Basic_UX>:
-    CheckBox:
-        size: dp(10), dp(10)
-        pos: 100, 200
-        id: checker
-        on_active: root.checking(self)
+    Slider:
+        size: root.width/2, 10
+        pos: root.width*.25, 10
+        min: 0
+        max: 100
+        on_value: root.changing(self)
+        canvas:
+            Color:
+                rgba: 1,0,0,1
+            Ellipse:
+                size: root.SZ, root.SZ
+                pos: root.width/2-root.SZ/2, root.height/2-root.SZ/2
 
 
 <MainInterface>:

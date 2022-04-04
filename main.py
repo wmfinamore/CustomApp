@@ -1,27 +1,16 @@
 from kivy.app import App
 from kivy.core.window import Window
+from kivy.properties import NumericProperty
 from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 
 
 class Basic_UX(Widget):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self.Btn = Button(text="Hello", size=(200, 100),
-                          pos=(300, 100), background_color=(.2, .3, .4, 1))
-        self.Btn.bind(on_press=self.remover)
+    SZ = NumericProperty()
 
-    def remover(self, event):
-        self.ids.checker.active = False
-        self.remove_widget(self)
-
-    def checking(self, Info):
-        if Info.active:
-            print("You have checked")
-            self.add_widget(self.Btn)
-        if not Info.active:
-            print("You have unchecked")
-            self.remove_widget(self.Btn)
+    def changing(self, info):
+        self.SZ = info.value*2
+        print(info.value)
 
 
 class MainInterface(Widget):
