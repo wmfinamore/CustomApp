@@ -6,7 +6,8 @@ from kivy.uix.widget import Widget
 
 
 class Basic_UX(Widget):
-    pass
+    def fun(self, sw):
+        print(sw.active)
 
 
 class MainInterface(Widget):
