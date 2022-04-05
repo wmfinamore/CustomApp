@@ -7,12 +7,37 @@ Basic_UX:
         min: 0
         max: 100
         on_value: root.changing(self)
+        value_track: True
+        value_track_color: .2,.9,.3,1
+        value_track_width: 5
         canvas:
             Color:
-                rgba: 1,0,0,1
+                rgba: root.R/100,root.G/100,root.B/100,1
             Ellipse:
                 size: root.SZ, root.SZ
                 pos: root.width/2-root.SZ/2, root.height/2-root.SZ/2
+    Slider:
+        size: root.width/2, 10
+        pos: root.width*.25, 30
+        min: 0
+        max: 100
+        on_value: root.red(self)
+    Slider:
+        size: root.width/2, 10
+        pos: root.width*.25, 50
+        min: 0
+        max: 100
+        on_value: root.green(self)
+    Slider:
+        size: root.width/2, 10
+        pos: root.width*.25, 70
+        min: 0
+        max: 100
+        on_value: root.blue(self)
+    ProgressBar:
+        pos: root.width*.25, 400
+        size: root.width/2, 20
+        value: root.SZ
 
 
 <MainInterface>:
