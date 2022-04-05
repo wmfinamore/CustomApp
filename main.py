@@ -6,24 +6,7 @@ from kivy.uix.widget import Widget
 
 
 class Basic_UX(Widget):
-    SZ = NumericProperty()
-    R = NumericProperty()
-    G = NumericProperty()
-    B = NumericProperty()
-
-    def changing(self, info):
-        self.SZ = info.value
-        self.R = info.value
-        print(info.value)
-
-    def red(self, info):
-        self.R = info.value
-
-    def green(self, info):
-        self.G = info.value
-
-    def blue(self, info):
-        self.B = info.value
+    pass
 
 
 class MainInterface(Widget):
